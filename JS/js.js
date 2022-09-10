@@ -112,3 +112,18 @@ featuredBtn.addEventListener('click', () => {
         })
     }
 })
+
+
+// accordian footer
+const supBtn = document.querySelector('.support .accord-btn');
+const abtBtn = document.querySelector('.about-us .accord-btn');
+const supAccord = document.querySelector('.support .footer-accord');
+const abtAccord = document.querySelector('.about-us .footer-accord');
+supBtn.addEventListener('click', () => {
+    supAccord.classList.toggle('show')
+    abtAccord.classList.remove('show');
+})
+abtBtn.addEventListener('click', () => {
+    abtAccord.classList.toggle('show');
+    supAccord.classList.remove('show');
+})

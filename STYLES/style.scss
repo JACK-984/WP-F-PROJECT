@@ -701,6 +701,7 @@ a {
     display: flex;
     flex-direction: column;
     a {
+        font-size: 1rem;
         padding: 5.25px 0;
     }
 }
@@ -717,6 +718,56 @@ a {
     .qoutes-container {
         h5 {
             font-size: 13px;
+        }
+    }
+}
+
+.accordian-icon {
+    display: none;
+    font-family: $header-font;
+}
+
+@media screen and (max-width: 550px) {
+    .accordian-icon {
+        display: block;
+    }
+    .footer-info {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-size: 14px;
+        border: 0;
+        .section-header {
+            font-size: 1.2rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            border-bottom: 2px var(--sec-white) solid;
+        }
+        a {
+            font-size: 1.2rem;
+        }
+        .footer-container {
+            padding: 0;
+            flex: 100%;
+            width: 100%;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            transition: $transition;
+            .footer-accord {
+                z-index: -1;
+                transition: $transition;
+                position: absolute;
+                transform: translateY(-150%);
+                padding: 0 10px;
+            }
+            .footer-accord.show {
+                position: relative;
+                transform: translateY(0%);
+            }
         }
     }
 }

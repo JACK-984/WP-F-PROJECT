@@ -871,6 +871,7 @@ a {
 }
 
 .footer-container a {
+  font-size: 1rem;
   padding: 5.25px 0;
 }
 
@@ -883,6 +884,71 @@ a {
 @media screen and (max-width: 375px) {
   .qoutes-container h5 {
     font-size: 13px;
+  }
+}
+
+.accordian-icon {
+  display: none;
+  font-family: "pixel", sans-serif;
+}
+
+@media screen and (max-width: 550px) {
+  .accordian-icon {
+    display: block;
+  }
+  .footer-info {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    border: 0;
+  }
+  .footer-info .section-header {
+    font-size: 1.2rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    border-bottom: 2px var(--sec-white) solid;
+  }
+  .footer-info a {
+    font-size: 1.2rem;
+  }
+  .footer-info .footer-container {
+    padding: 0;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    width: 100%;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+  .footer-info .footer-container .footer-accord {
+    z-index: -1;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    position: absolute;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    padding: 0 10px;
+  }
+  .footer-info .footer-container .footer-accord.show {
+    position: relative;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 /*# sourceMappingURL=style.css.map */
