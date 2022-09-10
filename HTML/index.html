@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <!-- favicon -->
+    <!-- fontawesome cd -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- fontawesome cd -->
+    <!-- styles -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../STYLES/style.css" />
+    <!-- styles -->
+    <title>eBook</title>
+</head>
+
+<body>
+    <!-- navigation menu -->
+    <section id="nav">
+        <div id="nav-container">
+            <div id="logo">
+                <a href="./index.html"><img src="../img/book_gif.gif" alt="" />
+                    <h3 class="logo-name">eBook</h3>
+                </a>
+            </div>
+            <div id="nav-menu">
+                <li>
+                    <button class="nav-btn btn collaspe-btn" data-bs-toggle="collapse" data-bs-target="#links">
+                            Explore
+                        </button>
+                </li>
+                <li>
+                    <button class="nav-btn btn collaspe-btn" data-bs-toggle="collapse" data-bs-target="#links2">
+                            Our Business
+                        </button>
+                </li>
+                <li>
+                    <button class="nav-btn btn collaspe-btn" data-bs-toggle="collapse" data-bs-target="#links3">
+                            Support
+                        </button>
+                </li>
+                <li>
+                    <button class="nav-btn btn" data-bs-toggle="collapse" data-bs-target="#">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                </li>
+                <li>
+                    <button class="nav-btn btn" data-bs-toggle="collapse" data-bs-target="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                </li>
+                <li>
+                    <button class="nav-btn btn dark-mode_btn">
+                            <i class="dark-icon fa-regular fa-moon"></i>
+                        </button>
+                </li>
+            </div>
+        </div>
+        <div class="collapse collapse-links" id="links">
+            <div class="all-section__container">
+                <div id="explore-section" class="collapse-sections">
+                    <h5 class="section-title">Explore</h5>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">Detail</a>
+                    </li>
+                </div>
+                <div class="right-side">
+                    <img src="../img/users.png" alt="" class="right-size__img" />
+                    <p>Explore the unknown and learn more about us.</p>
+                </div>
+            </div>
+        </div>
+        <div class="collapse collapse-links" id="links2">
+            <div class="all-section__container">
+                <div id="business-section" class="collapse-sections">
+                    <h5 class="section-title">Our Business</h5>
+                    <li>
+                        <a href="#">Shop All Offers</a>
+                    </li>
+                    <li>
+                        <a href="#">Trending</a>
+                    </li>
+                    <li>
+                        <a href="#">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#">Return Policy</a>
+                    </li>
+                </div>
+                <div class="right-side">
+                    <img src="../img/dollar.png" alt="" class="right-size__img" />
+                    <p>Learn how we operate behind closed doors.</p>
+                </div>
+            </div>
+        </div>
+        <div class="collapse collapse-links" id="links3">
+            <div class="all-section__container">
+                <div id="support-section" class="collapse-sections">
+                    <h5 class="section-title">support</h5>
+                    <li>
+                        <a href="#">Product Help</a>
+                    </li>
+                    <li>
+                        <a href="#">Request Return</a>
+                    </li>
+                    <li>
+                        <a href="#">Warranty Information</a>
+                    </li>
+                    <li>
+                        <a href="#">Order Support</a>
+                    </li>
+                </div>
+                <div class="right-side">
+                    <img src="../img/support.png" alt="" class="right-size__img" />
+                    <p>Our support is available 24/7.</p>
+                </div>
+            </div>
+        </div>
+        <!-- hamburger menu -->
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line2"></div>
+        </div>
+    </section>
+    <!-- carousel -->
+    <div class="carousel-wrapper">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="../img/books4.jpeg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption">
+                        <h5>New Releases</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../img/books10.jpeg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption">
+                        <h5>Top Authors</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="../img/Summer-2022-books-featured.jpeg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption">
+                        <h5>Groundbreaking Stories</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        </div>
+    </div>
+    <!-- products -->
+    <div class="products-wrapper padding">
+        <p class="section-header">Shop our lastest offers</p>
+        <div class="products-container">
+            <div class="selection">
+                <div class="forYou-btn select-btn active">For You</div>
+                <div class="featured-btn select-btn">Featured</div>
+            </div>
+            <div class="forYou-section product-container-padding each-section">
+                <div class="forYou-container padding each-container">
+                    <div class="each-product">
+                        <img src="../img/atomichabits-removebg-preview.png" alt="" />
+                        <p class="product-name">Atomic Habits</p>
+                        <div class="price-container">
+                            <p class="price-info">From 12.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/book-product-removebg-preview.png" alt="" />
+                        <p class="product-name">pain</p>
+                        <div class="price-container">
+                            <p class="price-info">From 15.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/eloquent-javascript Medium.png" alt="" />
+                        <p class="product-name">eloquent-js</p>
+                        <div class="price-container">
+                            <p class="price-info">From 18.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/how-to-win-friends-and-influence-people-front-removebg-preview.png" alt="" />
+                        <p class="product-name">win friends</p>
+                        <div class="price-container">
+                            <p class="price-info">From 12.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/PHP_book-removebg-preview.png" alt="" />
+                        <p class="product-name">Learning PHP</p>
+                        <div class="price-container">
+                            <p class="price-info">From 21.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/deep_work-removebg-preview.png" alt="" />
+                        <p class="product-name">deep work</p>
+                        <div class="price-container">
+                            <p class="price-info">From 17.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-section product-container-padding each-section">
+                <div class="featured-container padding each-container">
+                    <div class="each-product">
+                        <img src="../img/atomichabits-removebg-preview.png" alt="" />
+                        <p class="product-name">Atomic Habits</p>
+                        <div class="price-container">
+                            <p class="price-info">From 12.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/book-product-removebg-preview.png" alt="" />
+                        <p class="product-name">pain</p>
+                        <div class="price-container">
+                            <p class="price-info">From 15.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/eloquent-javascript Medium.png" alt="" />
+                        <p class="product-name">eloquent-js</p>
+                        <div class="price-container">
+                            <p class="price-info">From 18.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/how-to-win-friends-and-influence-people-front-removebg-preview.png" alt="" />
+                        <p class="product-name">win friends</p>
+                        <div class="price-container">
+                            <p class="price-info">From 12.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/PHP_book-removebg-preview.png" alt="" />
+                        <p class="product-name">Learning PHP</p>
+                        <div class="price-container">
+                            <p class="price-info">From 21.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="each-product">
+                        <img src="../img/deep_work-removebg-preview.png" alt="" />
+                        <p class="product-name">deep work</p>
+                        <div class="price-container">
+                            <p class="price-info">From 17.99$</p>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <section class="footer padding">
+        <div class="qoutes-container">
+            <h5 class="qoutes">"There is no friend as loyal as a <span>book</span>."</h5>
+            <h5 class="reference">-Ernest Hemingway</h5>
+        </div>
+        <div class="footer-info">
+            <div class="support footer-container">
+                <p class="section-header">Support</p>
+                <ul>
+                    <li><a href="#">Chat with Us</a></li>
+                    <li><a href="#">Product Support</a></li>
+                    <li><a href="#">Order Support</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Register Your Product</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">eBook Community</a></li>
+                    <li><a href="#">Give Feedback</a></li>
+                </ul>
+
+            </div>
+            <div class="about-us footer-container">
+                <p class="section-header">About Us</p>
+                <ul>
+                    <li><a href="#">Leadership & Mission</a></li>
+                    <li><a href="#">Our Business</a></li>
+                    <li><a href="#">Brand Identity</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Ethics</a></li>
+                    <li><a href="#">eBook Design</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- bootstrap js -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../JS/js.js"></script>
+</body>
+
+</html>
