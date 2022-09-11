@@ -27,6 +27,7 @@ sans-serif;
 $secondary-font: 'pixel2',
 sans-serif;
 $transition: .27s all ease-in-out;
+$bounce-transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 // global styles
 li {
     list-style: none;
@@ -83,6 +84,17 @@ a {
 #nav {
     position: fixed;
     width: 100%;
+    .overlay {
+        position: absolute;
+        background-color: #0000009F;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        display: none;
+    }
+    .overlay.active {
+        display: block;
+    }
     #nav-container {
         width: inherit;
         padding: 1.5rem 20%;
@@ -164,7 +176,7 @@ a {
 }
 
 // overriding bootstrap collapse transitions 
-.collasping {
+.collapsing {
     transition: $transition !important;
 }
 
@@ -222,6 +234,7 @@ a {
     flex-direction: column;
     display: none;
     z-index: 1;
+    cursor: pointer;
     .line,
     .line2 {
         transition: $transition;
@@ -455,7 +468,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .6s all ease-in-out;
+    transition: 0.6s cubic-bezier(0.87, 0, 0.13, 1);
     .each-container {
         width: fit-content;
         gap: 1rem;
@@ -492,7 +505,7 @@ a {
     .product-name {
         font-size: 1.1rem;
         font-family: $header-font;
-        color: var(--main-color);
+        color: var(--primary-dark);
         padding-top: 11rem;
     }
     .price-container {

@@ -28,10 +28,12 @@ logo.addEventListener("mouseleave", () => {
 // hamburger menu 
 const navMenu = document.getElementById("nav-menu");
 const hamBurgerMenu = document.querySelector(".hamburger-menu");
+const overLayNav = document.querySelector(".overlay");
 hamBurgerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     hamBurgerMenu.classList.toggle("active");
     nav.classList.toggle("active");
+    overLayNav.classList.toggle("active");
     document.body.classList.toggle("active");
 })
 
