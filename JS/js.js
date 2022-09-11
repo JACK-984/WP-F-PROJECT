@@ -32,13 +32,7 @@ hamBurgerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     hamBurgerMenu.classList.toggle("active");
     nav.classList.toggle("active");
-    // collapseClass.forEach(collapse => {
-    //     if (collapse.classList.contains("show")) {
-    //         // navBtn.classList.add("collapses");
-    //         navBtn.setAttribute("aria-expanded", "false");
-    //         collapse.classList.add("collapsing").remove("show");
-    //     }
-    // })
+    document.body.classList.toggle("active");
 })
 
 // >= 768px media query for collapse class animation change
@@ -117,13 +111,20 @@ featuredBtn.addEventListener('click', () => {
 // accordian footer
 const supBtn = document.querySelector('.support .accord-btn');
 const abtBtn = document.querySelector('.about-us .accord-btn');
+const footerCon = document.querySelectorAll('.footer-container');
 const supAccord = document.querySelector('.support .footer-accord');
 const abtAccord = document.querySelector('.about-us .footer-accord');
-supBtn.addEventListener('click', () => {
-    supAccord.classList.toggle('show')
-    abtAccord.classList.remove('show');
-})
-abtBtn.addEventListener('click', () => {
-    abtAccord.classList.toggle('show');
-    supAccord.classList.remove('show');
+// supBtn.addEventListener('click', () => {
+//     supAccord.classList.toggle('show')
+//     abtAccord.classList.remove('show');
+// })
+// abtBtn.addEventListener('click', () => {
+//     abtAccord.classList.toggle('show');
+//     supAccord.classList.remove('show');
+// })
+
+footerCon.forEach(footer => {
+    footer.addEventListener('click', () => {
+        footer.classList.toggle('active');
+    })
 })
