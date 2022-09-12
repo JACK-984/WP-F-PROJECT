@@ -3,7 +3,21 @@ $('.collaspe-btn').click(function(e) {
 });
 $('.hamburger-menu').click(function(e) {
     $('.collapse').collapse('hide');
-});
+}); // switch state for document loading and completed loading states
+
+// window on load event for loading screen
+// while window is still loading
+// scrolling is disabled
+document.body.classList.add('loading');
+const loader = document.querySelector('.loading-screen');
+window.addEventListener('load', () => {
+    // loader.style.display = "none";
+    loader.classList.add('transition');
+    // once document is fully loaded enables scrolling
+    document.body.classList.remove('loading');
+})
+
+
 const darkThemeBtn = document.querySelector(".dark-mode_btn");
 const darkIcon = document.querySelector(".dark-icon");
 const collapseClass = document.querySelectorAll(".collapse");
@@ -15,7 +29,7 @@ const carouselNext = document.querySelector(".carousel-control-next");
 const carouselPrev = document.querySelector(".carousel-control-prev");
 const carouselIndicators = document.querySelector(".carousel-indicators");
 
-// logo mouseOver event 
+// logo mouseOver event
 const logo = document.getElementById("logo")
 const logoName = document.querySelector(".logo-name")
 logo.addEventListener("mouseover", () => {

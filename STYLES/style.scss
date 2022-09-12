@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @font-face {
     font-family: 'pixel';
     src: url(../font/upheaval/upheavtt.ttf);
@@ -15,20 +16,30 @@ sans-serif;
 $secondary-font: 'pixel2',
 sans-serif;
 $transition: .27s all ease-in-out;
-$bounce-transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-$smooth-transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+$bounce-transition: all 0.6s cubic-bezier(0.34,
+1.56,
+0.64,
+1);
+$smooth-transition: all 0.6s cubic-bezier(0.87,
+0,
+0.13,
+1);
+$cursor-pointer: url(../img/cursor-click.png),
+pointer;
 :root {
     --primary-dark: #000;
     --sec-white: #fff;
     --main-color: #DF00FF;
     --theme-text: "LIGHT";
+    --text-color: #000;
 }
 
 .dark-mode {
-    --primary-dark: #fff;
+    --primary-dark: #f3f3c2;
     --sec-white: #000;
-    --main-color: #2ad1ff;
+    --main-color: #FF5349;
     --theme-text: "DARK";
+    --text-color: #fff;
 }
 
 // global styles
@@ -39,6 +50,7 @@ li {
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    cursor: url(../img/cursor.png), default;
 }
 
 // relative font size 
@@ -56,6 +68,10 @@ body {
     overflow: initial;
 }
 
+body.loading {
+    overflow: hidden;
+}
+
 body.active {
     overflow: hidden;
 }
@@ -63,6 +79,15 @@ body.active {
 a {
     text-decoration: none;
     color: var(--sec-white);
+    &:hover {
+        cursor: $cursor-pointer;
+    }
+}
+
+button {
+    &:hover {
+        cursor: $cursor-pointer;
+    }
 }
 
 * {
@@ -83,6 +108,75 @@ a {
     font-family: $header-font;
 }
 
+// loading screen
+.loading-screen {
+    background-color: var(--primary-dark);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(1);
+    img {
+        width: 300px;
+    }
+    p {
+        margin: 0;
+        margin-top: 1.3rem;
+        padding: 0;
+        font-size: 1rem;
+        font-family: 'Press Start 2P', cursive;
+        span {
+            font-family: 'Press Start 2P', cursive;
+            display: inline-block;
+            position: relative;
+            font-size: 1.3rem;
+            animation: loading .8s linear infinite;
+        }
+        span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    }
+}
+
+.loading-screen.transition {
+    transition: $smooth-transition;
+    transform: scale(0);
+}
+
+@keyframes loading {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+    15% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    30% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    45% {
+        transform: translateY(0px);
+    }
+}
+
 // nav styles
 #nav {
     position: fixed;
@@ -91,7 +185,7 @@ a {
         position: absolute;
         background-color: #0000009F;
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         z-index: -1;
         display: none;
     }
@@ -138,6 +232,7 @@ a {
                 transition: 0s all;
                 &:hover {
                     background: var(--main-color);
+                    cursor: $cursor-pointer;
                 }
             }
         }
@@ -235,21 +330,22 @@ a {
     background-color: var(--main-color);
 }
 
+.one-line {
+    position: absolute;
+    height: 80%;
+    width: 2px;
+    background-color: var(--sec-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .right-side {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-    &::before {
-        content: "";
-        background-color: var(--sec-white);
-        width: 1px;
-        height: 100px;
-        left: -30%;
-        position: absolute;
-        z-index: 1;
-    }
     .right-size__img {
         width: 50px;
         height: 50px;
@@ -272,7 +368,7 @@ a {
     flex-direction: column;
     display: none;
     z-index: 1;
-    cursor: pointer;
+    cursor: $cursor-pointer;
     .line,
     .line2 {
         transition: $transition;
@@ -325,6 +421,9 @@ a {
         li {
             width: 100%;
         }
+    }
+    .one-line {
+        display: none;
     }
     .collapse-links.active {
         border-top: var(--sec-white) 1px solid;
@@ -425,6 +524,17 @@ a {
 .carousel-control-prev,
 .carousel-indicators {
     filter: invert(100%);
+    &:hover {
+        cursor: $cursor-pointer;
+    }
+}
+
+.carousel-indicators {
+    button {
+        &:hover {
+            cursor: $cursor-pointer;
+        }
+    }
 }
 
 .carousel-control-next.active,
@@ -504,7 +614,7 @@ a {
         transition: $bounce-transition;
     }
     &:hover {
-        cursor: pointer;
+        cursor: $cursor-pointer;
         color: var(--main-color);
     }
 }
@@ -532,7 +642,7 @@ a {
     align-items: center;
     width: 300px;
     height: 300px;
-    border-radius: $border-radius;
+    // border-radius: $border-radius;
     background-color: var(--sec-white);
     position: relative;
     flex-direction: column;
@@ -550,7 +660,7 @@ a {
     .product-name {
         font-size: 1.1rem;
         font-family: $header-font;
-        color: var(--primary-dark);
+        color: var(--text-color);
         padding-top: 11rem;
     }
     .price-container {
@@ -563,7 +673,7 @@ a {
         overflow: hidden;
     }
     .price-info {
-        color: var(--primary-dark);
+        color: var(--text-color);
         position: relative;
         top: 0%;
         transition: $transition;
@@ -597,8 +707,8 @@ a {
 
 @media screen and (max-width: 1600px) {
     .each-product {
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
         img {
             height: 150px;
             top: 10%
@@ -814,7 +924,7 @@ a {
             justify-content: space-between;
             margin: 0;
             position: relative;
-            cursor: pointer;
+            cursor: $cursor-pointer;
         }
         a {
             font-size: 1.2rem;
