@@ -1173,6 +1173,13 @@ button:hover {
   margin-right: 1rem;
 }
 
+.about-container .about-left p span {
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--sec-white);
+  padding: .2rem .4rem;
+}
+
 .about-container .about-right {
   display: -webkit-box;
   display: -ms-flexbox;
