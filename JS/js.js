@@ -56,7 +56,7 @@ logo.addEventListener("mouseover", () => {
     logoName.innerHTML = "go home";
 })
 logo.addEventListener("mouseleave", () => {
-    logoName.innerHTML = "ebook";
+    logoName.innerHTML = "Cube-64";
 })
 
 // hamburger menu 
