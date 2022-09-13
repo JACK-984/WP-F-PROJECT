@@ -11,12 +11,32 @@ $('.hamburger-menu').click(function(e) {
 document.body.classList.add('loading');
 const loader = document.querySelector('.loading-screen');
 window.addEventListener('load', () => {
-    // loader.style.display = "none";
-    loader.classList.add('transition');
-    // once document is fully loaded enables scrolling
-    document.body.classList.remove('loading');
+        // loader.style.display = "none";
+        loader.classList.add('transition');
+        // once document is fully loaded enables scrolling
+        document.body.classList.remove('loading');
+    })
+    // audio player
+const audioBtn = document.querySelector('.audio-btn');
+const audio = document.querySelector('.audio');
+const audioIcon = document.querySelector('.audio-icon');
+const audioImg = document.querySelector('.audio-img');
+let isPaused = true;
+audioBtn.addEventListener('click', () => {
+    if (isPaused) {
+        audio.play();
+        audioIcon.classList.remove('fa-play');
+        audioIcon.classList.add('fa-pause');
+        audioImg.classList.add('active');
+        isPaused = false;
+    } else {
+        audio.pause();
+        audioIcon.classList.remove('fa-pause');
+        audioIcon.classList.add('fa-play');
+        audioImg.classList.remove('active');
+        isPaused = true;
+    }
 })
-
 
 const darkThemeBtn = document.querySelector(".dark-mode_btn");
 const darkIcon = document.querySelector(".dark-icon");
