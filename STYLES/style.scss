@@ -208,7 +208,7 @@ button {
         align-items: center;
         background: var(--primary-dark);
         .easter-egg {
-            display: none;
+            display: none !important;
             img {
                 height: 40px;
                 width: fit-content;
@@ -329,6 +329,22 @@ button {
         }
         &::after {
             display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dark-mode_btn {
+        &::before {
+            width: 5px;
+            height: 5px;
+            top: 50%;
+            transform: translate(12px, -50%) rotate(45deg);
+        }
+        &::after {
+            font-size: .6rem;
+            top: 50%;
+            transform: translate(1rem, -50%);
         }
     }
 }
@@ -614,7 +630,7 @@ button {
 .carousel-control-next,
 .carousel-control-prev,
 .carousel-indicators {
-    filter: invert(100%);
+    // filter: invert(100%);
     &:hover {
         cursor: $cursor-pointer;
     }
@@ -748,12 +764,12 @@ button {
     text-align: center;
     overflow: hidden;
     img {
-        top: 0;
+        top: 20px;
         position: absolute;
-        height: 200px;
+        height: 160px;
         width: auto;
         object-fit: cover;
-        transition: $bounce-transition;
+        transition: .4s all cubic-bezier(0.87, 0, 0.13, 1);
     }
     .product-name {
         font-size: 1.1rem;
@@ -780,7 +796,7 @@ button {
         color: var(--sec-white);
         position: absolute;
         top: 100%;
-        transition: $bounce-transition;
+        transition: .4s all cubic-bezier(0.87, 0, 0.13, 1);
         background-color: var(--main-color);
         padding: .4rem .8rem;
         &:hover {
@@ -792,7 +808,7 @@ button {
 
 .each-product.active {
     img {
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: $bounce-transition;
     }
     .price-info {

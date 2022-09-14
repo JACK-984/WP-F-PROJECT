@@ -53,7 +53,7 @@ const carouselIndicators = document.querySelector(".carousel-indicators");
 const logo = document.getElementById("logo")
 const logoName = document.querySelector(".logo-name")
 logo.addEventListener("mouseover", () => {
-    logoName.innerHTML = "go home";
+    logoName.innerHTML = "Move up";
 })
 logo.addEventListener("mouseleave", () => {
     logoName.innerHTML = "Cube-64";
