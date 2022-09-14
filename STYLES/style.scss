@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @font-face {
     font-family: 'pixel';
-    src: url(../font/upheaval/upheavtt.ttf);
+    src: url(/font/upheavtt.woff) format('woff'), url(/font/upheavtt.woff2) format('woff2');
 }
 
 @font-face {
     font-family: 'pixel2';
-    src: url(../font/VCR_OSD_MONO_1.001.ttf);
+    src: url(/font/VCR_OSD_MONO_1.001.woff) format('woff'), url(/font/VCR_OSD_MONO_1.001.woff2) format('woff2');
 }
 
 // sass variables
@@ -121,8 +121,8 @@ button {
     flex-direction: column;
     transform: scale(1);
     img {
-        width: fit-content;
-        height: 120px;
+        width: 120px;
+        object-fit: cover;
     }
     p {
         margin: 0;
@@ -224,8 +224,7 @@ button {
                 justify-content: center;
                 align-items: center;
                 img {
-                    width: fit-content;
-                    height: 40px;
+                    width: 50px;
                     object-fit: cover;
                     // -webkit-filter: drop-shadow(1px 1px 0 var(--sec-white)) drop-shadow(-1px -1px 0 var(--sec-white));
                     // filter: drop-shadow(1px 1px 0 var(--sec-white)) drop-shadow(-1px -1px 0 var(--sec-white));
@@ -263,14 +262,13 @@ button {
                 }
             }
             .audio-img {
-                height: 0px;
-                width: fit-content;
+                width: 0px;
                 object-fit: cover;
                 transition: $smooth-transition;
             }
             .audio-img.active {
                 transition: $smooth-transition;
-                height: 40px;
+                width: 50px;
             }
         }
     }
@@ -425,8 +423,7 @@ button {
         font-size: .8rem;
     }
     .right-size__img {
-        width: fit-content;
-        height: 200px;
+        width: 200px;
         object-fit: cover;
         -webkit-filter: drop-shadow(.1px .1px 0 var(--sec-white)) drop-shadow(-.1px -.1px 0 var(--sec-white));
         filter: drop-shadow(.1px .1px 0 var(--sec-white)) drop-shadow(-.1px -.1px 0 var(--sec-white));
@@ -554,8 +551,7 @@ button {
         position: relative;
         .right-size__img {
             position: absolute;
-            height: 100px;
-            width: fit-content;
+            width: 120px;
         }
         p {
             display: none;
@@ -571,12 +567,12 @@ button {
     }
     #links2 {
         .right-size__img {
-            top: -70px;
+            top: -85px;
         }
     }
     #links3 {
         .right-size__img {
-            top: -70px;
+            top: -65px;
         }
     }
     .section-title {
