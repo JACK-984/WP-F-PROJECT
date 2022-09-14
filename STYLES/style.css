@@ -32,7 +32,7 @@ li {
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  cursor: url(../img/cursor.png), default;
+  cursor: url(/img/cursor.png), default;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,11 +64,11 @@ a {
 }
 
 a:hover {
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
 }
 
 button:hover {
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
 }
 
 * {
@@ -343,7 +343,7 @@ button:hover {
 
 #nav #nav-container #nav-menu .nav-btn:hover {
   background: var(--main-color);
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
 }
 
 #nav #nav-container #nav-menu .audio-img {
@@ -583,7 +583,7 @@ button:hover {
           flex-direction: column;
   display: none;
   z-index: 1;
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
 }
 
 .hamburger-menu .line,
@@ -770,11 +770,11 @@ button:hover {
 .carousel-control-next:hover,
 .carousel-control-prev:hover,
 .carousel-indicators:hover {
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
 }
 
 .carousel-indicators button:hover {
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
 }
 
 .carousel-control-next.active,
@@ -874,7 +874,7 @@ button:hover {
 }
 
 .select-btn:hover {
-  cursor: url(../img/cursor-click.png), pointer;
+  cursor: url(/img/cursor-click.png), pointer;
   color: var(--main-color);
 }
 
@@ -1392,7 +1392,7 @@ button:hover {
             justify-content: space-between;
     margin: 0;
     position: relative;
-    cursor: url(../img/cursor-click.png), pointer;
+    cursor: url(/img/cursor-click.png), pointer;
   }
   .footer-info a {
     font-size: 1.2rem;

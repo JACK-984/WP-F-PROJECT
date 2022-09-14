@@ -24,7 +24,7 @@ $smooth-transition: all 0.6s cubic-bezier(0.87,
 0,
 0.13,
 1);
-$cursor-pointer: url(../img/cursor-click.png),
+$cursor-pointer: url(/img/cursor-click.png),
 pointer;
 :root {
     --primary-dark: #f3f3c2;
@@ -50,7 +50,7 @@ li {
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    cursor: url(../img/cursor.png), default;
+    cursor: url(/img/cursor.png), default;
 }
 
 // relative font size 
