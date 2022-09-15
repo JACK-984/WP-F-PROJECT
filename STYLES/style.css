@@ -361,6 +361,13 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+  #nav #nav-container #logo a img {
+    width: 40px;
+  }
+  #nav #nav-container #logo .logo-name {
+    font-size: 1.2rem;
+    margin: 0 10px;
+  }
   #nav #nav-container #nav-menu li:last-child {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1225,7 +1232,7 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
+    text-align: justify;
   }
   .about-container .about-left {
     margin: 0;

@@ -277,6 +277,17 @@ button {
 @media screen and (max-width: 768px) {
     #nav {
         #nav-container {
+            #logo {
+                a {
+                    img {
+                        width: 40px;
+                    }
+                }
+                .logo-name {
+                    font-size: 1.2rem;
+                    margin: 0 10px;
+                }
+            }
             #nav-menu {
                 li {
                     &:last-child {
@@ -996,7 +1007,7 @@ button {
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
         .about-left {
             margin: 0;
             border-bottom: 2px solid var(--sec-white);
