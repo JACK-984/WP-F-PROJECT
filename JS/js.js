@@ -164,3 +164,16 @@ footerCon.forEach(footer => {
         footer.classList.toggle('active');
     })
 })
+
+// team box socials 
+const teamBox = document.querySelectorAll('.team-box');
+const teamSocials = document.querySelector('.team-socials');
+
+teamBox.forEach(box => {
+    box.addEventListener('mouseover', () => {
+        box.classList.add('active');
+    })
+    box.addEventListener('mouseleave', () => {
+        box.classList.remove('active');
+    })
+})
