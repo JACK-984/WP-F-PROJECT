@@ -177,3 +177,15 @@ teamBox.forEach(box => {
         box.classList.remove('active');
     })
 })
+
+
+// contact section
+const contactBtn = document.querySelector('.contact-btn');
+const backBtn = document.querySelector('.back-btn');
+const contactContainer = document.querySelector('.contacts-container');
+contactBtn.addEventListener('click', () => {
+    contactContainer.classList.add('active');
+})
+backBtn.addEventListener('click', () => {
+    contactContainer.classList.remove('active');
+})
