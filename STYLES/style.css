@@ -959,8 +959,8 @@ button:hover {
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: 0.4s all cubic-bezier(0.87, 0, 0.13, 1);
-  transition: 0.4s all cubic-bezier(0.87, 0, 0.13, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .each-product .product-name {
@@ -992,8 +992,8 @@ button:hover {
   color: var(--text-color);
   position: relative;
   top: 0%;
-  -webkit-transition: 0.27s all ease-in-out;
-  transition: 0.27s all ease-in-out;
+  -webkit-transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .each-product .learn-more {
@@ -1001,8 +1001,8 @@ button:hover {
   color: #fff;
   position: absolute;
   top: 100%;
-  -webkit-transition: 0.4s all cubic-bezier(0.87, 0, 0.13, 1);
-  transition: 0.4s all cubic-bezier(0.87, 0, 0.13, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
   background-color: var(--main-color);
   padding: .4rem .8rem;
 }

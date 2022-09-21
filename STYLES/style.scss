@@ -790,7 +790,7 @@ button {
         height: 160px;
         width: auto;
         object-fit: cover;
-        transition: .4s all cubic-bezier(0.87, 0, 0.13, 1);
+        transition: $smooth-transition;
     }
     .product-name {
         font-size: 1.1rem;
@@ -811,14 +811,14 @@ button {
         color: var(--text-color);
         position: relative;
         top: 0%;
-        transition: $transition;
+        transition: $smooth-transition;
     }
     .learn-more {
         font-family: $header-font;
         color: #fff;
         position: absolute;
         top: 100%;
-        transition: .4s all cubic-bezier(0.87, 0, 0.13, 1);
+        transition: $smooth-transition;
         background-color: var(--main-color);
         padding: .4rem .8rem;
         &:hover {
