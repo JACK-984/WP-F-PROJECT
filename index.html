@@ -105,22 +105,16 @@
                 <div id="explore-section" class="collapse-sections">
                     <h5 class="section-title">Explore</h5>
                     <li>
-                        <a href="#">About</a>
+                        <a class="section-btn" href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Team</a>
+                        <a class="section-btn" href="#team">Team</a>
                     </li>
                     <li>
-                        <a href="#">Clients</a>
+                        <a class="section-btn" href="#clients">Clients</a>
                     </li>
                     <li>
                         <button class="contact-btn">Contact</button>
-                    </li>
-                    <li>
-                        <a href="#">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="#">Detail</a>
                     </li>
                 </div>
                 <div class="right-side">
@@ -135,7 +129,7 @@
                 <div id="business-section" class="collapse-sections">
                     <h5 class="section-title">Our Business</h5>
                     <li>
-                        <a href="#">Shop All Offers</a>
+                        <a href="#products" class="section-btn">Shop All Offers</a>
                     </li>
                     <li>
                         <a href="#">Trending</a>
@@ -223,6 +217,7 @@
         </div>
     </div>
     <!-- products -->
+    <div id="products" class="anchor"></div>
     <div class="products-wrapper padding">
         <p class="section-header">Shop our lastest offers</p>
         <div class="products-container">
@@ -337,6 +332,7 @@
         </div>
     </div>
     <!-- about -->
+    <div id="about" class="anchor"></div>
     <div class="about-wrapper padding">
         <p class="section-header">About</p>
         <div class="about-container">
@@ -356,6 +352,7 @@
         </div>
     </div>
     <!-- team -->
+    <div id="team" class="anchor"></div>
     <div class="team-wrapper padding">
         <p class="section-header">Team</p>
         <div class="team-container">
@@ -418,6 +415,7 @@
         </div>
     </div>
     <!-- clients section -->
+    <div id="clients" class="anchor"></div>
     <div class="client-wrapper padding">
         <p class="section-header">Clients</p>
         <div class="client-container">
@@ -435,7 +433,7 @@
             <div class="each-clients">
                 <div class="profile">
                     <img src="./img/justin.png" alt="">
-                    <p class="client-name section-header">Justin Bieber</p>
+                    <p class="client-name section-header">Justin</p>
                 </div>
                 <p>"She was in a hurry. Not the standard hurry when you're in a rush to get someplace, but a frantic hurry. The type of hurry where a few seconds could mean life or death. She raced down the road ignoring speed limits and weaving between
                     cars. She was only a few minutes away when traffic came to a dead standstill on the road ahead."</p>
@@ -443,7 +441,7 @@
             <div class="each-clients">
                 <div class="profile">
                     <img src="./img/bella.png" alt="">
-                    <p class="client-name section-header">Bella Poarch</p>
+                    <p class="client-name section-header">Bella</p>
                 </div>
                 <p>"Was it a whisper or was it the wind? He wasn't quite sure. He thought he heard a voice but at this moment all he could hear was the wind rustling the leaves of the trees all around him. He stopped and listened more intently to see if
                     he could hear the voice again. Nothing but the wind rustling the leaves could be heard. He was about to continue his walk when he felt a hand on his shoulder, and he quickly turned to see who it was. There was nobody there, but he
@@ -474,9 +472,9 @@
     <!-- contacts -->
     <div class="contacts-wrapper">
         <div class="contacts-container">
-            <p class="section-header back-btn"><i class="fa-solid fa-arrow-rotate-left"></i>Back</p>
-            <p class="section-header">Contact Us</p>
             <form class="contact-form" action="https://formspree.io/f/mnqrprzy" method="POST">
+                <p class="section-header back-btn"><i class="fa-solid fa-arrow-rotate-left"></i>Back</p>
+                <p class="section-header">Contact Us</p>
                 <label>Email:</label>
                 <input type="mail" name="Email">
                 <label> Phone Number: </label>
@@ -484,7 +482,7 @@
                 <label>Description:</label>
                 <textarea name="Message"></textarea>
                 <!-- your other form fields go here -->
-                <button type="submit" class="section-header">Send</button>
+                <button type="submit" class="section-header submit-btn">Submit</button>
             </form>
         </div>
     </div>
@@ -508,7 +506,7 @@
                     <li><a href="#">Give Feedback</a></li>
                 </ul>
             </div>
-            <div class="about-us footer-container">
+            <div id="about" class="about-us footer-container">
                 <p class="section-header accord-btn">About Us<span class="accordian-icon">V</span></p>
                 <ul class="footer-accord">
                     <li><a href="#">Leadership & Mission</a></li>

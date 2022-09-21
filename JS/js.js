@@ -63,12 +63,19 @@ logo.addEventListener("mouseleave", () => {
 const navMenu = document.getElementById("nav-menu");
 const hamBurgerMenu = document.querySelector(".hamburger-menu");
 const overLayNav = document.querySelector(".overlay");
+let burgerOpen = false;
 hamBurgerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     hamBurgerMenu.classList.toggle("active");
     nav.classList.toggle("active");
     overLayNav.classList.toggle("active");
-    document.body.classList.toggle("active");
+    document.body.classList.toggle('active');
+    if (navMenu.classList.contains('active')) {
+        burgerOpen = true;
+    } else {
+        burgerOpen = false;
+    }
+    // document.body.classList.toggle("active");
 })
 
 // >= 768px media query for collapse class animation change
@@ -100,11 +107,11 @@ darkThemeBtn.addEventListener('click', () => {
 })
 
 // hover for each product 
-
 const allProduct = document.querySelectorAll(".each-product");
 const eachProduct = document.querySelector(".each-product");
 const priceInfo = document.querySelector(".price-info");
 const learnMore = document.querySelector(".learn-more");
+
 allProduct.forEach(product => {
         product.addEventListener('mouseover', () => {
             product.classList.add('active')
@@ -150,14 +157,6 @@ const abtBtn = document.querySelector('.about-us .accord-btn');
 const footerCon = document.querySelectorAll('.footer-container');
 const supAccord = document.querySelector('.support .footer-accord');
 const abtAccord = document.querySelector('.about-us .footer-accord');
-// supBtn.addEventListener('click', () => {
-//     supAccord.classList.toggle('show')
-//     abtAccord.classList.remove('show');
-// })
-// abtBtn.addEventListener('click', () => {
-//     abtAccord.classList.toggle('show');
-//     supAccord.classList.remove('show');
-// })
 
 footerCon.forEach(footer => {
     footer.addEventListener('click', () => {
@@ -183,9 +182,42 @@ teamBox.forEach(box => {
 const contactBtn = document.querySelector('.contact-btn');
 const backBtn = document.querySelector('.back-btn');
 const contactContainer = document.querySelector('.contacts-container');
+const collapse = document.querySelectorAll('.collapse');
+$('.contact-btn').click(function(e) {
+    $('.collapse').collapse('hide');
+});
 contactBtn.addEventListener('click', () => {
-    contactContainer.classList.add('active');
+    if (burgerOpen) {
+        contactContainer.classList.add('active');
+        navMenu.classList.toggle("active");
+        hamBurgerMenu.classList.toggle("active");
+        nav.classList.toggle("active");
+        overLayNav.classList.toggle("active");
+        document.body.classList.toggle('active');
+        document.body.classList.add('active');
+    } else {
+        contactContainer.classList.add('active');
+        document.add('active');
+    }
 })
 backBtn.addEventListener('click', () => {
+    document.body.classList.remove('active');
     contactContainer.classList.remove('active');
+})
+
+// section button function
+$('.section-btn').click(function(e) {
+    $('.collapse').collapse('hide');
+});
+const sectionBtn = document.querySelectorAll('.section-btn');
+sectionBtn.forEach(button => {
+    button.addEventListener('click', () => {
+        if (burgerOpen) {
+            navMenu.classList.toggle("active");
+            hamBurgerMenu.classList.toggle("active");
+            nav.classList.toggle("active");
+            overLayNav.classList.toggle("active");
+            document.body.classList.toggle('active');
+        }
+    })
 })

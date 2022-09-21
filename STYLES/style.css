@@ -67,6 +67,10 @@ a:hover {
   cursor: url(/img/cursor-click.png), pointer;
 }
 
+.anchor {
+  height: 2rem;
+}
+
 button:hover {
   cursor: url(/img/cursor-click.png), pointer;
 }
@@ -338,7 +342,7 @@ button:hover {
   border: none;
   -webkit-transition: 0s all;
   transition: 0s all;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 #nav #nav-container #nav-menu .nav-btn:hover {
@@ -475,7 +479,7 @@ button:hover {
 }
 
 .collapse-links .all-section__container li a {
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 .collapse-links .all-section__container li a:hover {
@@ -566,7 +570,7 @@ button:hover {
 
 .right-side p {
   text-align: justify;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 .right-side .right-size__img {
@@ -993,7 +997,8 @@ button:hover {
 }
 
 .each-product .learn-more {
-  color: var(--sec-white);
+  font-family: "pixel", sans-serif;
+  color: #fff;
   position: absolute;
   top: 100%;
   -webkit-transition: 0.4s all cubic-bezier(0.87, 0, 0.13, 1);
@@ -1618,7 +1623,7 @@ button:hover {
 
 .team-container .team-box .team-name,
 .team-container .team-box .team-role {
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .team-container .team-box img {
@@ -1891,7 +1896,7 @@ button:hover {
 
 .each-clients .section-header {
   color: var(--sec-white);
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .each-clients:nth-child(5) img {
@@ -1982,24 +1987,11 @@ button:hover {
 }
 
 .contacts-container {
-  background-color: var(--primary-dark);
-  padding: 0 25%;
-  height: 100%;
+  background-color: #0000004D;
+  height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
-  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
-}
-
-.contacts-container .section-header {
-  font-size: .8rem;
-  padding: .2rem .4rem;
-}
-
-.contacts-container .section-header:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2009,27 +2001,13 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  top: 2.2rem;
-  margin-left: 4px;
-  gap: 4px;
-  cursor: url(/img/cursor-click.png), pointer;
-  color: var(--text-color);
-  z-index: 10;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
-.contacts-container .section-header:nth-child(1) i {
-  color: var(--text-color);
-}
-
-.contacts-container .section-header:nth-child(2) {
-  background-color: var(--sec-white);
-  color: var(--text-color);
-  position: relative;
-  width: 100%;
-  margin: 0;
-  margin-top: 4rem;
-  border: 2px solid var(--sec-white);
+.contacts-container .section-header {
+  font-size: 1rem;
+  padding: .2rem .4rem;
 }
 
 .contacts-container .contact-form {
@@ -2047,8 +2025,47 @@ button:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 2px solid var(--sec-white);
+  background-color: var(--primary-dark);
   margin: 0;
   padding: 1rem 2rem;
+  width: 600px;
+  position: relative;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.contacts-container .contact-form .section-header:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  margin-left: 4px;
+  gap: 4px;
+  cursor: url(/img/cursor-click.png), pointer;
+  color: var(--sec-white);
+  z-index: 10;
+}
+
+.contacts-container .contact-form .section-header:nth-child(1) i {
+  color: var(--sec-white);
+}
+
+.contacts-container .contact-form .section-header:nth-child(2) {
+  background-color: var(--sec-white);
+  color: var(--text-color);
+  position: relative;
+  top: -1rem;
+  width: inherit;
+  margin: 0;
+  border: 2px solid var(--sec-white);
 }
 
 .contacts-container .contact-form .input-container {
@@ -2077,6 +2094,7 @@ button:hover {
 }
 
 .contacts-container .contact-form label {
+  width: 100%;
   font-family: "pixel", sans-serif;
 }
 
@@ -2085,22 +2103,62 @@ button:hover {
   margin: 0;
 }
 
-.contacts-container .contact-form section-header {
+.contacts-container .contact-form .section-header {
+  color: var(--sec-white);
   margin: 0;
-  padding: .2rem .4rem;
   border: var(--sec-white) 2px solid;
 }
 
+.contacts-container .contact-form .submit-btn {
+  cursor: url(/img/cursor-click.png), pointer;
+}
+
+.contacts-container .contact-form .submit-btn:hover {
+  color: var(--text-color);
+  border: var(--text-color) 2px solid;
+}
+
+.contacts-container .contact-form .back-btn:hover {
+  color: var(--text-color);
+}
+
+.contacts-container .contact-form .back-btn:hover i {
+  color: var(--text-color);
+}
+
 .contacts-container.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.contacts-container.active .contact-form {
   -webkit-transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
   transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media screen and (max-width: 768px) {
-  .contacts-container {
-    padding: 0 5%;
+  .contacts-container .contact-form {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contacts-container .contact-form {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contacts-container .contact-form {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .contacts-container .contact-form {
+    width: 270px;
   }
 }
 /*# sourceMappingURL=style.css.map */
