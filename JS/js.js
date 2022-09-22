@@ -1,22 +1,27 @@
+// selects all the .collapse-btn classes
+// makes it so that when you click a collapse
+// it will close the other collapses
 $('.collaspe-btn').click(function(e) {
     $('.collapse').collapse('hide');
 });
 $('.hamburger-menu').click(function(e) {
     $('.collapse').collapse('hide');
-}); // switch state for document loading and completed loading states
+});
 
+// switch state for document loading and completed loading states
 // window on load event for loading screen
 // while window is still loading
 // scrolling is disabled
 document.body.classList.add('loading');
 const loader = document.querySelector('.loading-screen');
 window.addEventListener('load', () => {
-        // loader.style.display = "none";
-        loader.classList.add('transition');
-        // once document is fully loaded enables scrolling
-        document.body.classList.remove('loading');
-    })
-    // audio player
+    // loader.style.display = "none";
+    loader.classList.add('transition');
+    // once document is fully loaded enables scrolling
+    document.body.classList.remove('loading');
+})
+
+// audio player
 const audioBtn = document.querySelector('.audio-btn');
 const audio = document.querySelector('.audio');
 const audioIcon = document.querySelector('.audio-icon');
@@ -24,12 +29,16 @@ const audioImg = document.querySelector('.audio-img');
 let isPaused = true;
 audioBtn.addEventListener('click', () => {
     if (isPaused) {
+        // if audio is paused click listener will enable
+        // audio to play when it is clicked
         audio.play();
         audioIcon.classList.remove('fa-play');
         audioIcon.classList.add('fa-pause');
         audioImg.classList.add('active');
         isPaused = false;
     } else {
+        // if audio is not paused click listener will enable
+        // audio to pause when it is clicked
         audio.pause();
         audioIcon.classList.remove('fa-pause');
         audioIcon.classList.add('fa-play');
@@ -38,13 +47,14 @@ audioBtn.addEventListener('click', () => {
     }
 })
 
-const darkThemeBtn = document.querySelector(".dark-mode_btn");
-const darkIcon = document.querySelector(".dark-icon");
+
 const collapseClass = document.querySelectorAll(".collapse");
 const MAX768 = window.matchMedia("(max-width: 768px)");
 const MIN768 = window.matchMedia("(min-width: 768px)");
+
+
+// 3 unused variables
 const navBtn = document.querySelector(".nav-btn");
-const nav = document.getElementById("nav-container");
 const carouselNext = document.querySelector(".carousel-control-next");
 const carouselPrev = document.querySelector(".carousel-control-prev");
 const carouselIndicators = document.querySelector(".carousel-indicators");
@@ -63,6 +73,7 @@ logo.addEventListener("mouseleave", () => {
 const navMenu = document.getElementById("nav-menu");
 const hamBurgerMenu = document.querySelector(".hamburger-menu");
 const overLayNav = document.querySelector(".overlay");
+const nav = document.getElementById("nav-container");
 let burgerOpen = false;
 hamBurgerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
@@ -91,7 +102,11 @@ function collapseChange() {
 collapseChange();
 // calls the collapseChange() when the window is resized
 window.addEventListener("resize", collapseChange);
+
+
 // darkTheme function
+const darkThemeBtn = document.querySelector(".dark-mode_btn");
+const darkIcon = document.querySelector(".dark-icon");
 darkThemeBtn.addEventListener('click', () => {
     document.body.classList.toggle("dark-mode"); //toggle darkMode on body
     // carouselNext.classList.toggle("active");
@@ -128,7 +143,7 @@ const forYouSection = document.querySelector('.forYou-section');
 let featuredOpen = false;
 // let forYouOpen = true;
 featuredBtn.addEventListener('click', () => {
-    if (featuredOpen === false) {
+    if (!featuredOpen) {
         forYouBtn.classList.remove('active');
         featuredBtn.classList.add('active');
         forYouSection.classList.remove('show');
@@ -137,7 +152,7 @@ featuredBtn.addEventListener('click', () => {
         featuredSection.classList.add('show');
         featuredOpen = true;
     }
-    if (featuredOpen === true) {
+    if (featuredOpen) {
         forYouBtn.addEventListener('click', () => {
             featuredBtn.classList.remove('active');
             forYouBtn.classList.add('active');
@@ -169,9 +184,11 @@ const teamBox = document.querySelectorAll('.team-box');
 const teamSocials = document.querySelector('.team-socials');
 
 teamBox.forEach(box => {
+    // when hovered will show social links
     box.addEventListener('mouseover', () => {
-        box.classList.add('active');
-    })
+            box.classList.add('active');
+        })
+        // when not in hover state will remove social links
     box.addEventListener('mouseleave', () => {
         box.classList.remove('active');
     })
@@ -183,6 +200,8 @@ const contactBtn = document.querySelector('.contact-btn');
 const backBtn = document.querySelector('.back-btn');
 const contactContainer = document.querySelector('.contacts-container');
 const collapse = document.querySelectorAll('.collapse');
+// makes it so that when you open contact section
+// if collapse is open it will auto close the collapse
 $('.contact-btn').click(function(e) {
     $('.collapse').collapse('hide');
 });
@@ -230,6 +249,7 @@ function OverlayChange() {
     })
 }
 OverlayChange();
+// when window resizes call the OverlayChange()
 window.addEventListener('resize', OverlayChange);
 
 // buggy code
