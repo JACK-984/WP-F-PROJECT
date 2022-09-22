@@ -486,6 +486,10 @@ button:hover {
   color: var(--main-color);
 }
 
+.collapse-links .all-section__container li .contact-btn {
+  font-size: .9rem;
+}
+
 .collapse-links .all-section__container li button {
   font-size: .8rem;
   background-color: transparent;
@@ -1266,6 +1270,12 @@ button:hover {
   .about-container .about-right .fight-battle img:nth-child(2) {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .about-container .about-right .fight-battle img {
+    width: 100px;
   }
 }
 

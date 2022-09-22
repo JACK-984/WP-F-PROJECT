@@ -383,6 +383,9 @@ button {
                     color: var(--main-color);
                 }
             }
+            .contact-btn {
+                font-size: .9rem;
+            }
             button {
                 font-size: .8rem;
                 background-color: transparent;
@@ -1037,6 +1040,18 @@ button {
                     &:nth-child(2) {
                         transform: scaleX(-1);
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .about-container {
+        .about-right {
+            .fight-battle {
+                img {
+                    width: 100px;
                 }
             }
         }
